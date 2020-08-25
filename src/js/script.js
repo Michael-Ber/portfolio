@@ -18,13 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const percents = document.querySelectorAll('.skills__progress-percent'),
           barActive = document.querySelectorAll('.skills__progress-bar-active');
     
-
-    function stringToNumber (str) {
-        return +str.textContent.slice(0, -1);
-    }
-
     percents.forEach((percent, index) => {
-        barActive[index].style.width = `${stringToNumber(percent)}%`;
+        barActive[index].style.width = percent.textContent;
     });
 })
 
