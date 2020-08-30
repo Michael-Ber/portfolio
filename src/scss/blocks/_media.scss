@@ -38,6 +38,36 @@
             }
         }
     }
+
+    .portfolio {
+        &__wrapper {
+            justify-content: space-around;
+            row-gap: 35px;
+            .horizontal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 350px 535px;    
+            padding: 0 30px 0 31px;
+            column-gap: 20px;
+        }
+
+        &__form {
+            grid-template: 45px minmax(190px,auto) 45px / repeat(2,255px);
+            column-gap: 20px;
+            .form__button {
+                font-size: 14px;
+            }
+        }
+        &__triggers {
+            column-gap: 27px;
+        }
+    }
     
 }
 
@@ -45,10 +75,13 @@
     .container {
         max-width: 720px;
     }
-
+    .title {
+        &_fz36 {
+            font-size: 30px;
+        }
+    }
     .about {
         &__title {
-            font-size: 30px;
             width: 100%;
         }
         &__wrapper {
@@ -67,11 +100,7 @@
 
     .resume {
         padding-top: 70px;
-        .title {
-            &_fz36 {
-                font-size: 30px;
-            }
-        }
+        
         &__wrapper {
             padding: 50px 0;
             grid-template-columns: 340px 340px;
@@ -84,11 +113,6 @@
 
     .skills {
         padding-top: 30px;
-        .title {
-            &_fz36 {
-                font-size: 30px;
-            }
-        }
         &__wrapper {
             padding: 60px 10px 60px 10px;
         }
@@ -98,18 +122,54 @@
             }
         }
     }
+    .portfolio {
+        &__wrapper {
+            margin-top: 40px;
+        }
+        padding-top: 40px;
+        .divider {
+            margin: 10px auto 0 auto;
+        }
+    }
+
+    .price {
+        &__wrapper {
+            padding: 40px 0 0 0;
+            grid-template-columns: repeat(auto-fit, 350px);
+        }
+    }
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+        &__photo {
+            display: none;
+            
+        }
+        &__mail {
+            justify-self: center;
+        }
+    }
 }
 
 @media (max-width: 768px) {
     .container {
         max-width: 540px;
+        
+    }
+    .title {
+        &_fz48 {
+            font-size: 24px;
+        }
     }
     .promo {
         &__title {
-            font-size: 30px;
             line-height: 39px;
             width: 300px;
+            font-size: 24px;
         }
+        
     }
     .about {
         padding-top: 30px; 
@@ -151,6 +211,28 @@
             }
         }
     }
+    .price {
+        &__wrapper {
+            justify-content: center;
+        }
+    }
+
+    .contacts {
+        &__form {
+            grid-template: 45px minmax(190px,auto) 45px / repeat(2,auto);
+        }
+        &__triggers {
+            grid-template-rows: repeat(2, auto);
+            row-gap: 10px;
+            grid-template-columns: unset;
+            justify-content: center;
+            .form__button {
+                width: 200px;
+                padding: 12px 17px;
+                justify-self: center;
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -158,10 +240,9 @@
         width: 100%;
         padding: 0 10px;
     }
-
-    .promo {
-        &__title {
-            font-size: 26px;
+    .title {
+        &_fz48, &_fz36 {
+            font-size: 24px;
         }
     }
 
@@ -177,10 +258,6 @@
     }
 
     .about {
-        &__title {
-            font-size: 24px;
-            
-        }
         &__wrapper {
             grid-template-rows: 340px auto auto;
         }
@@ -191,11 +268,6 @@
 
     .resume {
         padding-top: 40px;
-        .title {
-            &_fz36 {
-                font-size: 24px;
-            }
-        }
         &__wrapper {
             padding: 40px 0 0 0;
         }
@@ -206,7 +278,6 @@
         padding-top: 40px;
         .title {
             &_fz36 {
-                font-size: 24px;
                 line-height: 36px;
                 margin-top: 20px;
             }
@@ -218,6 +289,32 @@
         &__progress {
             &-wrapper {
                 grid-template-columns: 1fr;
+            }
+        }
+    }
+    .price {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit,300px);
+        }
+        &__item {
+            column-gap: 5px;
+        }
+    }
+    .contacts {
+        padding: 40px 0 90px 0;
+        &__form {
+            grid-template: 45px 45px minmax(190px,auto) 45px / 1fr;
+        }
+
+        &__triggers, .two-columns {
+            grid-column: unset;
+        }
+        &__policy {
+            display: grid;
+            grid-template-columns: 20px auto;
+            align-items: center;
+            a {
+                grid-column: 1 / 3;
             }
         }
     }
