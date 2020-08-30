@@ -1,7 +1,5 @@
 @media (max-width: 1439px) {
-    .container {
-        max-width: 960px;
-    }
+  
     .sidepanel {
         display: none;
     }
@@ -11,12 +9,94 @@
     .container {
         max-width: 960px;
     }
+    .about {
+        &__wrapper {
+            grid-template-columns: 400px 510px;
+            column-gap: 50px;
+        }
+        &__skills {
+            grid-template-columns: 245px 245px;
+            column-gap: 20px;
+            &-item {
+                grid-template-columns: 40px 185px;
+            }
+        }
+    }
+    .resume {
+        &__wrapper {
+            grid-template-columns: 380px 380px;
+            column-gap: 85px;
+        }
+    }
+    .skills {
+        &__wrapper {
+            justify-content: center;
+        }
+        &__progress {
+            &-wrapper {
+                justify-content: center;
+            }
+        }
+    }
     
 }
 
 @media (max-width: 992px) {
     .container {
         max-width: 720px;
+    }
+
+    .about {
+        &__title {
+            font-size: 30px;
+            width: 100%;
+        }
+        &__wrapper {
+            grid-template-columns: 340px 340px;
+            column-gap: 40px;
+        }
+        &__skills {
+            grid-template-columns: 340px;
+            grid-template-rows: auto;
+            grid-auto-rows: auto;
+            &-item {
+                grid-template-columns: 40px 280px;
+            }
+        }
+    }
+
+    .resume {
+        padding-top: 70px;
+        .title {
+            &_fz36 {
+                font-size: 30px;
+            }
+        }
+        &__wrapper {
+            padding: 50px 0;
+            grid-template-columns: 340px 340px;
+            column-gap: 40px;
+        }
+        &__skill {
+            grid-template-columns: 40px 1fr;
+        }
+    }
+
+    .skills {
+        padding-top: 30px;
+        .title {
+            &_fz36 {
+                font-size: 30px;
+            }
+        }
+        &__wrapper {
+            padding: 60px 10px 60px 10px;
+        }
+        &__progress {
+            &-wrapper {
+                grid-template-columns: repeat(auto-fill,335px);
+            }
+        }
     }
 }
 
@@ -29,6 +109,46 @@
             font-size: 30px;
             line-height: 39px;
             width: 300px;
+        }
+    }
+    .about {
+        padding-top: 30px; 
+        &__title {
+            line-height: 60px;
+        }
+        &__photo {
+            grid-row: unset;
+        }
+        &__wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: 400px auto auto;
+        }
+        &__skills {
+            grid-template-columns: 260px 260px;
+            &-item {
+                grid-template-columns: 40px 200px;
+                column-gap: 20px;
+            }
+        }
+    }
+
+    .resume {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            column-gap: 0;
+            row-gap: 40px;
+        }
+        
+    }
+
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fill,253px);
+        }
+        &__progress {
+            &-wrapper {
+                grid-template-columns: repeat(auto-fill,247px);
+            }
         }
     }
 }
@@ -53,6 +173,52 @@
         &__block {
             width: 250px;
             padding-left: 50px;
+        }
+    }
+
+    .about {
+        &__title {
+            font-size: 24px;
+            
+        }
+        &__wrapper {
+            grid-template-rows: 340px auto auto;
+        }
+        &__skills {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .resume {
+        padding-top: 40px;
+        .title {
+            &_fz36 {
+                font-size: 24px;
+            }
+        }
+        &__wrapper {
+            padding: 40px 0 0 0;
+        }
+        
+    }
+
+    .skills {
+        padding-top: 40px;
+        .title {
+            &_fz36 {
+                font-size: 24px;
+                line-height: 36px;
+                margin-top: 20px;
+            }
+        }
+        &__wrapper {
+            grid-template-columns: repeat(auto-fill,270px);
+            padding: 20px 10px 40px 10px;
+        }
+        &__progress {
+            &-wrapper {
+                grid-template-columns: 1fr;
+            }
         }
     }
 }
